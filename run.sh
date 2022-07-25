@@ -5,12 +5,14 @@
 #  SPDX-License-Identifier: Apache-2.0
 ##############################################################################################
 
-set -e
+set -ex
 
 echo "Starting build process..."
 
 echo "Adding env variables..."
 export PATH=/root/bin:$PATH
+export JAVA_HOME=/home/program/jdk-14
+export PATH=/home/program/jdk-14/bin:$PATH
 
 #Path to k8s config file
 KUBECONFIG=/home/bevel/build/config
